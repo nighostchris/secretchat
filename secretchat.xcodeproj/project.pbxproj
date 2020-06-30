@@ -13,6 +13,8 @@
 		37C50D9D24ABA3710024BC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C50D9C24ABA3710024BC4B /* Assets.xcassets */; };
 		37C50DA024ABA3710024BC4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C50D9F24ABA3710024BC4B /* Preview Assets.xcassets */; };
 		37C50DA324ABA3710024BC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */; };
+		37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAB24ABA6440024BC4B /* CustomInputField.swift */; };
+		37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		37C50D9F24ABA3710024BC4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37C50DA224ABA3710024BC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37C50DA424ABA3710024BC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37C50DAB24ABA6440024BC4B /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		37C50D9524ABA36F0024BC4B /* secretchat */ = {
 			isa = PBXGroup;
 			children = (
+				37C50DAA24ABA5FE0024BC4B /* Models */,
 				37C50D9624ABA36F0024BC4B /* AppDelegate.swift */,
 				37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */,
 				37C50D9A24ABA36F0024BC4B /* ContentView.swift */,
@@ -63,6 +68,7 @@
 				37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */,
 				37C50DA424ABA3710024BC4B /* Info.plist */,
 				37C50D9E24ABA3710024BC4B /* Preview Content */,
+				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
 			);
 			path = secretchat;
 			sourceTree = "<group>";
@@ -73,6 +79,14 @@
 				37C50D9F24ABA3710024BC4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37C50DAA24ABA5FE0024BC4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37C50DAB24ABA6440024BC4B /* CustomInputField.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */,
 				37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */,
 				37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */,
+				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
 				37C50D9B24ABA36F0024BC4B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
