@@ -27,14 +27,14 @@ struct CustomInputField: View {
             Text(title)
                 .font(.caption)
                 .padding(.leading)
-                .foregroundColor(Color("TextFieldLabelColor"))
+                .foregroundColor(Color("BWDuet"))
             HStack {
                 TextField("", text: $value)
                     .textFieldStyle(CustomTextFieldStyle())
             }
             .frame(height: 48)
             .overlay(RoundedRectangle(cornerRadius: 10)
-            .stroke(Color("TextFieldBorderColor"), lineWidth: 1))
+            .stroke(Color("BWDuet"), lineWidth: 1))
             .padding(.horizontal)
         }
     }

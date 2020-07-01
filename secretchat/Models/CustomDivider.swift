@@ -22,7 +22,7 @@ struct CustomDivider: View {
         VStack {
             Divider()
                 .frame(height: 2)
-                .background(Color("DividerColor"))
+                .background(Color("BWDuet"))
         }
         .padding(.horizontal)
     }
@@ -31,8 +31,8 @@ struct CustomDivider: View {
         HStack {
             line
             Text(label)
-                .foregroundColor(Color("DividerColor"))
-                .font(.system(size: 14))
+                .foregroundColor(Color("BWDuet"))
+                .font(.callout)
             line
         }
         .padding(.vertical, verticalPadding)

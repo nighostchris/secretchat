@@ -15,69 +15,41 @@ struct LoginPageView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 0) {
+                Spacer()
+                
+                Image("logo")
+                
+                Spacer()
+                
                 VStack(spacing: 15) {
                     CustomInputField(title: "Email Address")
                     
                     CustomInputField(title: "Password")
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        HStack {
-                            Spacer()
-                            Text("Login")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            Spacer()
-                        }
-                        .frame(height: 40)
-                        .background(Color("LoginButtonColor"))
-                        .cornerRadius(10)
-                    }
-                    .padding(.horizontal)
+                    CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "LoginButtonColor", labelColor: "Black")
                     .padding(.top, 10)
                 }
                 .padding(.horizontal)
                 
-                CustomDivider(label: "Or", verticalPadding: 36)
+                CustomDivider(label: "or", verticalPadding: 36)
                     .padding(.horizontal)
                 
                 VStack(spacing: 24) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        HStack {
-                            Spacer()
-                            Image("facebook-logo")
-                                .renderingMode(.original)
-                                .resizable()
-                                .scaledToFit()
-                            Text("Continue with Facebook")
-                                .foregroundColor(Color("ButtonTextColor"))
-                                .fontWeight(.bold)
-                            Spacer()
-                        }
-                        .frame(height: 40)
-                        .background(Color("FacebookLoginButtonColor"))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                    }
+                    CustomImageButton(image: "facebook-logo", label: "Continue with Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White")
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        HStack {
-                            Spacer()
-                            Image("google-logo")
-                                .renderingMode(.original)
-                                .resizable()
-                                .scaledToFit()
-                            Text("Continue with Google")
-                                .foregroundColor(Color.black)
-                                .fontWeight(.bold)
-                            Spacer()
-                        }
-                        .frame(height: 40)
-                        .background(Color("GoogleLoginButtonColor"))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                    }
+                    CustomImageButton(image: "google-logo", label: "Continue with Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black")
                 }
                 .padding(.horizontal)
+                
+                HStack {
+                    Text("Need an account ?")
+                        .padding(.leading)
+                    Spacer()
+                    Text("Forget password ?")
+                        .padding(.trailing)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 24)
             }
         }
     }
@@ -85,9 +57,11 @@ struct LoginPageView: View {
 
 struct LoginPageView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            LoginPageView().colorScheme(.dark)
+        ForEach(["iPhone 8", "iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in Group {
+                LoginPageView().colorScheme(.dark)
+            }
+            .previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
         }
-        .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
     }
 }
