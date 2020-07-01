@@ -11,20 +11,40 @@ import SwiftUI
 struct LoginPageView: View {
     var body: some View {
         ZStack {
-            Color("DarkModeBackground")
+            Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
-            
-            VStack {
+
+            VStack(spacing: 15) {
                 CustomInputField(title: "Email Address")
+                
                 CustomInputField(title: "Password")
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    HStack {
+                        Spacer()
+                        Text("Login")
+                            .foregroundColor(Color.black)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                    .frame(height: 40)
+                    .background(Color("LoginButtonColor"))
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                .padding(.top, 10)
             }
+            .padding(.horizontal)
         }
     }
 }
 
 struct LoginPageView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginPageView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
+        Group {
+            LoginPageView().colorScheme(.light)
+            LoginPageView().colorScheme(.dark)
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
     }
 }

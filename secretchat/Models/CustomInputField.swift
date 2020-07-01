@@ -18,26 +18,25 @@ struct CustomInputField: View {
         public func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
                 .padding(.leading)
-                .foregroundColor(Color("DarkModePlaceholder"))
+                .foregroundColor(Color("TextFieldColor"))
         }
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 5) {
             Text(title)
                 .font(.caption)
                 .padding(.leading)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("TextFieldLabelColor"))
             HStack {
                 TextField("", text: $value)
                     .textFieldStyle(CustomTextFieldStyle())
             }
             .frame(height: 48)
             .overlay(RoundedRectangle(cornerRadius: 10)
-            .stroke(Color.white, lineWidth: 1))
+            .stroke(Color("TextFieldBorderColor"), lineWidth: 1))
             .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
