@@ -1,12 +1,6 @@
 {
   "images" : [
     {
-      "alignment-insets" : {
-        "bottom" : 0,
-        "left" : 20,
-        "right" : 0,
-        "top" : 0
-      },
       "filename" : "google-logo.png",
       "idiom" : "universal",
       "scale" : "1x"

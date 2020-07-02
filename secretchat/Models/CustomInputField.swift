@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CustomInputField: View {
     @State
-    private var value = "chrisliupascal@gmail.com"
+    private var value = ""
 
     var title: String
     
@@ -23,20 +23,14 @@ struct CustomInputField: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text(title)
-                .font(.caption)
-                .padding(.leading)
-                .foregroundColor(Color("BWDuet"))
-            HStack {
-                TextField("", text: $value)
-                    .textFieldStyle(CustomTextFieldStyle())
-            }
-            .frame(height: 48)
-            .overlay(RoundedRectangle(cornerRadius: 10)
-            .stroke(Color("BWDuet"), lineWidth: 1))
-            .padding(.horizontal)
+        HStack {
+            TextField("Email Address", text: $value)
+                .textFieldStyle(CustomTextFieldStyle())
         }
+        .frame(height: 48)
+        .overlay(RoundedRectangle(cornerRadius: 10)
+        .stroke(Color("BWDuet"), lineWidth: 1))
+        .padding(.horizontal)
     }
 }
 

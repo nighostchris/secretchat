@@ -14,42 +14,51 @@ struct LoginPageView: View {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
 
-            VStack(spacing: 0) {
+            VStack {
                 Spacer()
                 
                 Image("logo")
+                    .resizable()
+                    .frame(width: 175, height: 175)
                 
                 Spacer()
                 
-                VStack(spacing: 15) {
-                    CustomInputField(title: "Email Address")
+                VStack {
+                    Group {
+                        CustomInputField(title: "Email Address")
+                            .padding(.bottom)
+                        
+                        CustomInputField(title: "Password")
+                            .padding(.bottom)
+                        
+                        CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "LoginButtonColor", labelColor: "Black")
+                    }
                     
-                    CustomInputField(title: "Password")
+                    CustomDivider(label: "or", verticalPadding: 0)
+                        .padding(.vertical)
                     
-                    CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "LoginButtonColor", labelColor: "Black")
-                    .padding(.top, 10)
+                
+                    Group {
+                        CustomImageButton(image: "facebook-logo", label: "Continue with Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White", imageSize: 35)
+                            .padding(.bottom)
+                        
+                        CustomImageButton(image: "google-logo", label: "Continue with Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black", imageSize: 35)
+                            .padding(.bottom)
+                        
+                        HStack {
+                            Text("Need an account ?")
+                                .fontWeight(.bold)
+                                .padding(.leading)
+                            Spacer()
+                            Text("Forget password ?")
+                                .fontWeight(.bold)
+                                .padding(.trailing)
+                        }
+                    }
                 }
                 .padding(.horizontal)
                 
-                CustomDivider(label: "or", verticalPadding: 36)
-                    .padding(.horizontal)
-                
-                VStack(spacing: 24) {
-                    CustomImageButton(image: "facebook-logo", label: "Continue with Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White")
-                    
-                    CustomImageButton(image: "google-logo", label: "Continue with Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black")
-                }
-                .padding(.horizontal)
-                
-                HStack {
-                    Text("Need an account ?")
-                        .padding(.leading)
-                    Spacer()
-                    Text("Forget password ?")
-                        .padding(.trailing)
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 24)
+                Spacer()
             }
         }
     }
@@ -57,7 +66,7 @@ struct LoginPageView: View {
 
 struct LoginPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 8", "iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in Group {
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in Group {
                 LoginPageView().colorScheme(.dark)
             }
             .previewDevice(PreviewDevice(rawValue: deviceName))
