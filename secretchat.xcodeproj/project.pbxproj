@@ -57,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3716014424AF779900ABFD9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
+				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		375EA2A624AC5F9E00869C9A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,11 +95,10 @@
 		37C50D9524ABA36F0024BC4B /* secretchat */ = {
 			isa = PBXGroup;
 			children = (
+				3716014424AF779900ABFD9A /* Views */,
 				375EA2A624AC5F9E00869C9A /* Resources */,
 				37C50DAA24ABA5FE0024BC4B /* Models */,
 				37C50D9624ABA36F0024BC4B /* AppDelegate.swift */,
-				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
-				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
 				37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */,
 				37C50D9A24ABA36F0024BC4B /* ContentView.swift */,
 				37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */,
