@@ -2,6 +2,7 @@
     <img
       alt="Secret Chat"
       src="https://github.com/nighostchris/secretchat/blob/master/secretchat/Resources/Images/logo.png"
+      width="200px"
     />
 </p>
 The first app I built in my life to let me get familiar with iOS & Swift development.
