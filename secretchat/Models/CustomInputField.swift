@@ -24,7 +24,7 @@ struct CustomInputField: View {
     
     var body: some View {
         HStack {
-            TextField("Email Address", text: $value)
+            TextField(title, text: $value)
                 .textFieldStyle(CustomTextFieldStyle())
         }
         .frame(height: 48)

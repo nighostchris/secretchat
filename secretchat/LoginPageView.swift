@@ -31,7 +31,8 @@ struct LoginPageView: View {
                         CustomInputField(title: "Password")
                             .padding(.bottom)
                         
-                        CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "LoginButtonColor", labelColor: "Black")
+                        CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "GeneralButtonColor", labelColor: "Black")
+                            .padding(.bottom)
                     }
                     
                     CustomDivider(label: "or", verticalPadding: 0)
@@ -40,7 +41,7 @@ struct LoginPageView: View {
                 
                     Group {
                         CustomImageButton(image: "facebook-logo", label: "Continue with Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White", imageSize: 35)
-                            .padding(.bottom)
+                            .padding(.vertical)
                         
                         CustomImageButton(image: "google-logo", label: "Continue with Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black", imageSize: 35)
                             .padding(.bottom)
@@ -49,16 +50,19 @@ struct LoginPageView: View {
                             Text("Need an account ?")
                                 .fontWeight(.bold)
                                 .padding(.leading)
+                                .font(.subheadline)
+                            
                             Spacer()
+                            
                             Text("Forget password ?")
                                 .fontWeight(.bold)
                                 .padding(.trailing)
+                                .font(.subheadline)
                         }
+                        .padding(.vertical)
                     }
                 }
                 .padding(.horizontal)
-                
-                Spacer()
             }
         }
     }
@@ -66,7 +70,7 @@ struct LoginPageView: View {
 
 struct LoginPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in Group {
+        ForEach(["iPhone SE", "iPhone XS"], id: \.self) { deviceName in Group {
                 LoginPageView().colorScheme(.dark)
             }
             .previewDevice(PreviewDevice(rawValue: deviceName))
