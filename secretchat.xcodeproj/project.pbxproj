@@ -21,7 +21,7 @@
 		37C50DA324ABA3710024BC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */; };
 		37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAB24ABA6440024BC4B /* CustomInputField.swift */; };
 		37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */; };
-		37C5C9B024ACBC4E00EB1558 /* CustomImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C9AF24ACBC4E00EB1558 /* CustomImageButton.swift */; };
+		37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */; };
 		37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC47E224AC755D00FA8459 /* CustomDivider.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		37C50DA424ABA3710024BC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C50DAB24ABA6440024BC4B /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
-		37C5C9AF24ACBC4E00EB1558 /* CustomImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageButton.swift; sourceTree = "<group>"; };
+		37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		37DC47E224AC755D00FA8459 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +121,7 @@
 			children = (
 				37C50DAB24ABA6440024BC4B /* CustomInputField.swift */,
 				37DC47E224AC755D00FA8459 /* CustomDivider.swift */,
-				37C5C9AF24ACBC4E00EB1558 /* CustomImageButton.swift */,
+				37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */,
 				37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */,
 				37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */,
-				37C5C9B024ACBC4E00EB1558 /* CustomImageButton.swift in Sources */,
+				37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */,
 				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
 				3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */,
 				37C50D9B24ABA36F0024BC4B /* ContentView.swift in Sources */,

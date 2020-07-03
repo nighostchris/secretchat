@@ -18,7 +18,7 @@ struct CustomInputField: View {
         public func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
                 .padding(.leading)
-                .foregroundColor(Color("TextFieldColor"))
+                .foregroundColor(Color("BW2Duet"))
         }
     }
     

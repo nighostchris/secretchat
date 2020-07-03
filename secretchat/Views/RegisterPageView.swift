@@ -35,7 +35,7 @@ struct RegisterPageView: View {
                                 .font(.largeTitle)
                             
                             Text("spend 1 min and start to chat")
-                                .foregroundColor(Color("TextFieldColor"))
+                                .foregroundColor(Color("BW2Duet"))
                                 .fontWeight(.bold)
                                 .font(.subheadline)
                         }

@@ -9,72 +9,114 @@
 import SwiftUI
 
 struct LoginPageView: View {
+    var gradient: Gradient {
+        let stops: [Gradient.Stop] = [
+            .init(color: Color("LighterBackgroundColor"), location: 0.3),
+            .init(color: Color("BackgroundColor"), location: 0.5)
+        ]
+        
+        return Gradient(stops: stops)
+    }
+    
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("BackgroundColor")
+            GeometryReader { metrics in
+                ZStack {
+                    LinearGradient(gradient: self.gradient, startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all)
 
-                VStack {
-                    Spacer()
-                    
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 175, height: 175)
-                    
-                    Spacer()
-                    
                     VStack {
-                        Group {
-                            CustomInputField(title: "Email Address")
-                                .padding(.bottom)
-                            
-                            CustomInputField(title: "Password")
-                                .padding(.bottom)
-                            
-                            CustomImageButton(label: "Login", height: 40, cornerRadius: 10, buttonColor: "GeneralButtonColor", labelColor: "Black")
-                                .padding(.bottom)
-                        }
+                        Spacer()
                         
-                        CustomDivider(label: "or", verticalPadding: 0)
-                            .padding(.vertical)
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 175, height: 175)
+                            .padding(.top)
                         
-                    
-                        Group {
-                            CustomImageButton(image: "facebook-logo", label: "Continue with Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White", imageSize: 35)
+                        Spacer()
+                        
+                        VStack {
+                            VStack {
+                                CustomInputField(title: "Email Address")
+                                    .padding(.bottom)
+                                
+                                CustomInputField(title: "Password")
+                                    .padding(.bottom)
+                                
+                                CustomButton(label: "Login", height: 40, cornerRadius: 10, labelColor: "Black")
+                                    .padding(.bottom)
+                                    .padding(.horizontal)
+                            }
+                            .padding(.top)
+                            
+                            
+                            CustomDivider(label: "or", haveLine: true, verticalPadding: 0)
                                 .padding(.vertical)
+                                
                             
-                            CustomImageButton(image: "google-logo", label: "Continue with Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black", imageSize: 35)
-                                .padding(.bottom)
-                            
-                            HStack {
-                                NavigationLink(destination: RegisterPageView()
-                                    .navigationBarTitle("")
-                                    .navigationBarHidden(true)
-                                    .navigationBarBackButtonHidden(true)
-                                ) {
-                                    Text("Need an account ?")
-                                        .fontWeight(.bold)
-                                        .padding(.leading)
-                                        .font(.subheadline)
+                            VStack {
+                                HStack {
+                                    CustomButton(image: "facebook-logo", label: "Facebook", height: 40, cornerRadius: 10, buttonColor: "FacebookLoginButtonColor", labelColor: "White", imageSize: 35)
+                                    
+                                    Spacer()
+                                    
+                                    CustomButton(image: "google-logo", label: "Google", height: 40, cornerRadius: 10, buttonColor: "GoogleLoginButtonColor", labelColor: "Black", imageSize: 35)
                                 }
                                 
-                                Spacer()
-                                
-                                Text("Forget password ?")
-                                    .fontWeight(.bold)
-                                    .padding(.trailing)
-                                    .font(.subheadline)
+                                HStack {
+                                    NavigationLink(destination: RegisterPageView()
+                                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)
+                                        .navigationBarBackButtonHidden(true)
+                                    ) {
+                                        HStack {
+                                            Spacer()
+                                            
+                                            Text("Sign Up")
+                                                .fontWeight(.bold)
+                                                .foregroundColor(Color("White"))
+
+                                            Spacer()
+                                        }
+                                        .frame(height: 40)
+                                        .background(Color("Green"))
+                                        .cornerRadius(10)
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    NavigationLink(destination: RegisterPageView()
+                                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)
+                                        .navigationBarBackButtonHidden(true)
+                                    ) {
+                                        HStack {
+                                            Spacer()
+                                            
+                                            Text("Reset Password")
+                                                .fontWeight(.bold)
+                                                .foregroundColor(Color("White"))
+
+                                            Spacer()
+                                        }
+                                        .frame(height: 40)
+                                        .background(Color("Red"))
+                                        .cornerRadius(10)
+                                    }
+                                }
                             }
-                            .padding(.vertical)
+                            .padding(.horizontal)
+                            .padding(.top)
                         }
+                        .padding(.horizontal)
+                        
+                        Spacer()
                     }
-                    .padding(.horizontal)
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
         }
     }
 }
