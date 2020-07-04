@@ -22,10 +22,13 @@
 		37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAB24ABA6440024BC4B /* CustomInputField.swift */; };
 		37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */; };
 		37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */; };
+		37C8B54E24B04EDE00D27578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */; };
 		37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC47E224AC755D00FA8459 /* CustomDivider.swift */; };
+		93B25C7189733DF9D7CD9CA6 /* Pods_secretchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93068D30D2DC80B050CE0ED7 /* Pods_secretchat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0931FA398B2ED6E180859322 /* Pods-secretchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretchat.release.xcconfig"; path = "Target Support Files/Pods-secretchat/Pods-secretchat.release.xcconfig"; sourceTree = "<group>"; };
 		3716014224AF4D6600ABFD9A /* RegisterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageView.swift; sourceTree = "<group>"; };
 		3754E8C424AE114D0053EF3B /* facebook-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-logo.png"; sourceTree = "<group>"; };
 		3754E8C624AE12550053EF3B /* google-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo.png"; sourceTree = "<group>"; };
@@ -43,7 +46,10 @@
 		37C50DAB24ABA6440024BC4B /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37DC47E224AC755D00FA8459 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		93068D30D2DC80B050CE0ED7 /* Pods_secretchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secretchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D5EB4991CE561FAAC86807 /* Pods-secretchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretchat.debug.xcconfig"; path = "Target Support Files/Pods-secretchat/Pods-secretchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B25C7189733DF9D7CD9CA6 /* Pods_secretchat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 			children = (
 				37C50D9524ABA36F0024BC4B /* secretchat */,
 				37C50D9424ABA36F0024BC4B /* Products */,
+				C37D7E301FBE417B0CA76E0B /* Pods */,
+				6AA16B9D906F6C71758CA2DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				37C50D9A24ABA36F0024BC4B /* ContentView.swift */,
 				37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */,
 				37C50DA424ABA3710024BC4B /* Info.plist */,
+				37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */,
 				37C50D9E24ABA3710024BC4B /* Preview Content */,
 			);
 			path = secretchat;
@@ -137,6 +147,24 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		6AA16B9D906F6C71758CA2DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93068D30D2DC80B050CE0ED7 /* Pods_secretchat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C37D7E301FBE417B0CA76E0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6D5EB4991CE561FAAC86807 /* Pods-secretchat.debug.xcconfig */,
+				0931FA398B2ED6E180859322 /* Pods-secretchat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37C50DA724ABA3710024BC4B /* Build configuration list for PBXNativeTarget "secretchat" */;
 			buildPhases = (
+				C9064A6051C58A3D3E37FB07 /* [CP] Check Pods Manifest.lock */,
 				37C50D8F24ABA36F0024BC4B /* Sources */,
 				37C50D9024ABA36F0024BC4B /* Frameworks */,
 				37C50D9124ABA36F0024BC4B /* Resources */,
+				1AACD67608E8A3F2BFF609A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +227,7 @@
 			files = (
 				3754E8CB24AE1C8E0053EF3B /* logo-dark.png in Resources */,
 				37C50DA324ABA3710024BC4B /* LaunchScreen.storyboard in Resources */,
+				37C8B54E24B04EDE00D27578 /* GoogleService-Info.plist in Resources */,
 				3754E8C524AE114D0053EF3B /* facebook-logo.png in Resources */,
 				375EA2A824AC5FBD00869C9A /* Colors.xcassets in Resources */,
 				3754E8C724AE12550053EF3B /* google-logo.png in Resources */,
@@ -207,6 +238,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AACD67608E8A3F2BFF609A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secretchat/Pods-secretchat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-secretchat/Pods-secretchat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-secretchat/Pods-secretchat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9064A6051C58A3D3E37FB07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secretchat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37C50D8F24ABA36F0024BC4B /* Sources */ = {
@@ -354,6 +427,7 @@
 		};
 		37C50DA824ABA3710024BC4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D5EB4991CE561FAAC86807 /* Pods-secretchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +449,7 @@
 		};
 		37C50DA924ABA3710024BC4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0931FA398B2ED6E180859322 /* Pods-secretchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
