@@ -10,8 +10,8 @@ import SwiftUI
 import Firebase
 
 struct RegisterPageView: View {
-    @State var email: String
-    @State var password: String
+    @State var email: String = ""
+    @State var password: String = ""
     @State var haveError: Bool = false
     @State var errorMessage: String?
     

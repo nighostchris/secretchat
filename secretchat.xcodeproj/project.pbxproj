@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370986F924B0AEFB0095EEE4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370986F824B0AEFB0095EEE4 /* SplashView.swift */; };
 		3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716014224AF4D6600ABFD9A /* RegisterPageView.swift */; };
 		3754E8C524AE114D0053EF3B /* facebook-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C424AE114D0053EF3B /* facebook-logo.png */; };
 		3754E8C724AE12550053EF3B /* google-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C624AE12550053EF3B /* google-logo.png */; };
@@ -15,7 +16,7 @@
 		375EA2A824AC5FBD00869C9A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375EA2A724AC5FBD00869C9A /* Colors.xcassets */; };
 		37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9624ABA36F0024BC4B /* AppDelegate.swift */; };
 		37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */; };
-		37C50D9B24ABA36F0024BC4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9A24ABA36F0024BC4B /* ContentView.swift */; };
+		37C50D9B24ABA36F0024BC4B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9A24ABA36F0024BC4B /* RootView.swift */; };
 		37C50D9D24ABA3710024BC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C50D9C24ABA3710024BC4B /* Assets.xcassets */; };
 		37C50DA024ABA3710024BC4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C50D9F24ABA3710024BC4B /* Preview Assets.xcassets */; };
 		37C50DA324ABA3710024BC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0931FA398B2ED6E180859322 /* Pods-secretchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretchat.release.xcconfig"; path = "Target Support Files/Pods-secretchat/Pods-secretchat.release.xcconfig"; sourceTree = "<group>"; };
+		370986F824B0AEFB0095EEE4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3716014224AF4D6600ABFD9A /* RegisterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageView.swift; sourceTree = "<group>"; };
 		3754E8C424AE114D0053EF3B /* facebook-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-logo.png"; sourceTree = "<group>"; };
 		3754E8C624AE12550053EF3B /* google-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo.png"; sourceTree = "<group>"; };
@@ -39,7 +41,7 @@
 		37C50D9324ABA36F0024BC4B /* secretchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secretchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C50D9624ABA36F0024BC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37C50D9A24ABA36F0024BC4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37C50D9A24ABA36F0024BC4B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		37C50D9C24ABA3710024BC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C50D9F24ABA3710024BC4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37C50DA224ABA3710024BC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
 				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
+				370986F824B0AEFB0095EEE4 /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,7 +115,7 @@
 				37C50DAA24ABA5FE0024BC4B /* Models */,
 				37C50D9624ABA36F0024BC4B /* AppDelegate.swift */,
 				37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */,
-				37C50D9A24ABA36F0024BC4B /* ContentView.swift */,
+				37C50D9A24ABA36F0024BC4B /* RootView.swift */,
 				37C50DA124ABA3710024BC4B /* LaunchScreen.storyboard */,
 				37C50DA424ABA3710024BC4B /* Info.plist */,
 				37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */,
@@ -303,8 +306,9 @@
 				37C8B55024B0635800D27578 /* AuthController.swift in Sources */,
 				37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */,
 				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
+				370986F924B0AEFB0095EEE4 /* SplashView.swift in Sources */,
 				3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */,
-				37C50D9B24ABA36F0024BC4B /* ContentView.swift in Sources */,
+				37C50D9B24ABA36F0024BC4B /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
