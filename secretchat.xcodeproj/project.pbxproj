@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */; };
 		37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */; };
 		37C8B54E24B04EDE00D27578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */; };
+		37C8B55024B0635800D27578 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8B54F24B0635800D27578 /* AuthController.swift */; };
 		37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC47E224AC755D00FA8459 /* CustomDivider.swift */; };
 		93B25C7189733DF9D7CD9CA6 /* Pods_secretchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93068D30D2DC80B050CE0ED7 /* Pods_secretchat.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37C8B54F24B0635800D27578 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		37DC47E224AC755D00FA8459 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		93068D30D2DC80B050CE0ED7 /* Pods_secretchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secretchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D5EB4991CE561FAAC86807 /* Pods-secretchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretchat.debug.xcconfig"; path = "Target Support Files/Pods-secretchat/Pods-secretchat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		37C50D9524ABA36F0024BC4B /* secretchat */ = {
 			isa = PBXGroup;
 			children = (
+				37C8B55124B0637100D27578 /* Controllers */,
 				3716014424AF779900ABFD9A /* Views */,
 				375EA2A624AC5F9E00869C9A /* Resources */,
 				37C50DAA24ABA5FE0024BC4B /* Models */,
@@ -136,6 +139,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		37C8B55124B0637100D27578 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37C8B54F24B0635800D27578 /* AuthController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		37DC47E424AC7FEC00FA8459 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +172,6 @@
 				A6D5EB4991CE561FAAC86807 /* Pods-secretchat.debug.xcconfig */,
 				0931FA398B2ED6E180859322 /* Pods-secretchat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -290,6 +300,7 @@
 				37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */,
 				37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */,
 				37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */,
+				37C8B55024B0635800D27578 /* AuthController.swift in Sources */,
 				37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */,
 				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
 				3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */,

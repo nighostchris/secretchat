@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct LoginPageView: View {
+    @State var email: String = ""
+    @State var password: String = ""
+    
     var gradient: Gradient {
         let stops: [Gradient.Stop] = [
             .init(color: Color("LighterBackgroundColor"), location: 0.3),
@@ -37,10 +40,10 @@ struct LoginPageView: View {
                         
                         VStack {
                             VStack {
-                                CustomInputField(title: "Email Address")
+                                CustomInputField(title: "Email Address", value: self.$email)
                                     .padding(.bottom)
                                 
-                                CustomInputField(title: "Password")
+                                CustomInputField(title: "Password", value: self.$password)
                                     .padding(.bottom)
                                 
                                 CustomButton(label: "Login", height: 40, cornerRadius: 10, labelColor: "Black")
@@ -64,7 +67,7 @@ struct LoginPageView: View {
                                 }
                                 
                                 HStack {
-                                    NavigationLink(destination: RegisterPageView()
+                                    NavigationLink(destination: RegisterPageView(email: "", password: "")
                                         .navigationBarTitle("")
                                         .navigationBarHidden(true)
                                         .navigationBarBackButtonHidden(true)
@@ -85,7 +88,7 @@ struct LoginPageView: View {
                                     
                                     Spacer()
                                     
-                                    NavigationLink(destination: RegisterPageView()
+                                    NavigationLink(destination: RegisterPageView(email: "", password: "")
                                         .navigationBarTitle("")
                                         .navigationBarHidden(true)
                                         .navigationBarBackButtonHidden(true)

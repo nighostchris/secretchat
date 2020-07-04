@@ -9,10 +9,8 @@
 import SwiftUI
 
 struct CustomInputField: View {
-    @State
-    private var value = ""
-
     var title: String
+    @Binding var value: String
     
     public struct CustomTextFieldStyle: TextFieldStyle {
         public func _body(configuration: TextField<Self._Label>) -> some View {
@@ -31,12 +29,5 @@ struct CustomInputField: View {
         .overlay(RoundedRectangle(cornerRadius: 10)
         .stroke(Color("BWDuet"), lineWidth: 1))
         .padding(.horizontal)
-    }
-}
-
-struct CustomInputField_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomInputField(title: "Email Address")
-            .previewDevice(PreviewDevice(rawValue: "iPhone XS"))
     }
 }

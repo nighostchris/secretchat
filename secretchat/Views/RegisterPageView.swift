@@ -7,11 +7,40 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct RegisterPageView: View {
-    @Environment(\.presentationMode)
-    var mode: Binding<PresentationMode>
-
+    @State var email: String
+    @State var password: String
+    @State var haveError: Bool = false
+    @State var errorMessage: String?
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    @EnvironmentObject var authController: AuthController
+    
+    func signUp() {
+        authController.signUp(email: email, password: password, handler: { (result, error) in
+            if error != nil {
+                if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                    switch errorCode {
+                        case .invalidEmail:
+                            self.errorMessage = "Invalid email format."
+                        case .emailAlreadyInUse:
+                            self.errorMessage = "Email already in use."
+                        default:
+                            self.errorMessage = "Unknown error."
+                    }
+                }
+                
+                self.haveError = true
+            } else {
+                self.email = ""
+                self.password = ""
+            }
+        })
+    }
+    
     var body: some View {
         NavigationView {
             GeometryReader { metrics in
@@ -42,17 +71,17 @@ struct RegisterPageView: View {
                         .frame(height: metrics.size.height * 0.3)
                         
                         VStack {
-                            CustomInputField(title: "Email Address")
+                            CustomInputField(title: "Email Address", value: self.$email)
                                 .padding(.bottom)
                             
-                            CustomInputField(title: "Password")
+                            CustomInputField(title: "Password", value: self.$password)
                         }
                         .frame(height: metrics.size.height * 0.3)
                         
                         VStack {
                             Spacer()
                             
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Button(action: self.signUp) {
                                 Spacer()
                                 
                                 Text("Create")
@@ -66,6 +95,9 @@ struct RegisterPageView: View {
                             .cornerRadius(14)
                             .padding(.horizontal)
                             .padding(.bottom)
+                            .alert(isPresented: self.$haveError) {
+                                Alert(title: Text(self.errorMessage!))
+                            }
                             
                             Button(action: { self.mode.wrappedValue.dismiss() }) {
                                 Text("Already have an account ? Sign in")
@@ -92,7 +124,7 @@ struct RegisterPageView: View {
 struct RegisterPageView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE", "iPhone XS"], id: \.self) { deviceName in Group {
-                RegisterPageView().colorScheme(.dark)
+                RegisterPageView(email: "testing@mail.com", password: "testing").colorScheme(.dark)
             }
             .previewDevice(PreviewDevice(rawValue: deviceName))
             .previewDisplayName(deviceName)
