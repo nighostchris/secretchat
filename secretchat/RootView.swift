@@ -34,7 +34,7 @@ struct RootView: View {
                 LoginPageView()
                     .transition(.opacity)
             } else if self.switchToMain {
-                LoginPageView()
+                MainPageView()
                     .transition(.opacity)
             }
         }

@@ -14,6 +14,8 @@
 		3754E8C924AE182F0053EF3B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C824AE182F0053EF3B /* logo.png */; };
 		3754E8CB24AE1C8E0053EF3B /* logo-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8CA24AE1C8E0053EF3B /* logo-dark.png */; };
 		375EA2A824AC5FBD00869C9A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375EA2A724AC5FBD00869C9A /* Colors.xcassets */; };
+		376EAA9624B1C7E7006A0022 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EAA9524B1C7E7006A0022 /* MainPageView.swift */; };
+		376EAA9924B1DCC3006A0022 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EAA9824B1DCC3006A0022 /* CustomSearchBar.swift */; };
 		37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9624ABA36F0024BC4B /* AppDelegate.swift */; };
 		37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */; };
 		37C50D9B24ABA36F0024BC4B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C50D9A24ABA36F0024BC4B /* RootView.swift */; };
@@ -38,6 +40,8 @@
 		3754E8C824AE182F0053EF3B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		3754E8CA24AE1C8E0053EF3B /* logo-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark.png"; sourceTree = "<group>"; };
 		375EA2A724AC5FBD00869C9A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		376EAA9524B1C7E7006A0022 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		376EAA9824B1DCC3006A0022 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		37C50D9324ABA36F0024BC4B /* secretchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secretchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C50D9624ABA36F0024BC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C50D9824ABA36F0024BC4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
 				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
 				370986F824B0AEFB0095EEE4 /* SplashView.swift */,
+				376EAA9524B1C7E7006A0022 /* MainPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -86,6 +91,14 @@
 				375EA2A724AC5FBD00869C9A /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		376EAA9724B1DCAD006A0022 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				376EAA9824B1DCC3006A0022 /* CustomSearchBar.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		37C50D8A24ABA36F0024BC4B = {
@@ -135,6 +148,7 @@
 		37C50DAA24ABA5FE0024BC4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				376EAA9724B1DCAD006A0022 /* SearchBar */,
 				37C50DAB24ABA6440024BC4B /* CustomInputField.swift */,
 				37DC47E224AC755D00FA8459 /* CustomDivider.swift */,
 				37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */,
@@ -301,10 +315,12 @@
 			files = (
 				37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */,
 				37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */,
+				376EAA9924B1DCC3006A0022 /* CustomSearchBar.swift in Sources */,
 				37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */,
 				37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */,
 				37C8B55024B0635800D27578 /* AuthController.swift in Sources */,
 				37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */,
+				376EAA9624B1C7E7006A0022 /* MainPageView.swift in Sources */,
 				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
 				370986F924B0AEFB0095EEE4 /* SplashView.swift in Sources */,
 				3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */,
