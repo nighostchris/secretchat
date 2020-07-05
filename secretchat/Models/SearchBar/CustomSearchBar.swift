@@ -2,41 +2,85 @@
 //  CustomSearchBar.swift
 //  secretchat
 //
-//  Created by Chris Liu on 5/7/2020.
+//  Created by Chris Liu on 6/7/2020.
 //  Copyright © 2020 Secret Chat. All rights reserved.
 //
 
 import SwiftUI
+import Combine
 
-struct CustomSearchBar: UIViewRepresentable {
-    @Binding var text: String
-    
-    class Coordinator: NSObject, UISearchBarDelegate {
-        @Binding var text: String
-        
-        init(text: Binding<String>) {
-            _text = text
-        }
-        
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
-        }
+public extension View {
+    func navigationBarSearch(_ searchText: Binding<String>) -> some View {
+        return overlay(
+            CustomSearchBar(text: searchText)
+                .frame(width: 0, height: 0)
+        )
     }
-    
+}
+
+fileprivate struct CustomSearchBar: UIViewControllerRepresentable {
+    @Binding var text: String
+
+    init(text: Binding<String>) {
+        self._text = text
+    }
+
+    func makeUIViewController(context: Context) -> SearchBarWrapperController {
+        return SearchBarWrapperController()
+    }
+
+    func updateUIViewController(_ controller: SearchBarWrapperController, context: Context) {
+        controller.searchController = context.coordinator.searchController
+    }
+
     func makeCoordinator() -> Coordinator {
         return Coordinator(text: $text)
     }
-    
-    func makeUIView(context: UIViewRepresentableContext<CustomSearchBar>) -> UISearchBar {
-        let searchBar = UISearchBar(frame: .zero)
-        searchBar.delegate = context.coordinator
-        searchBar.searchBarStyle = .minimal
-        searchBar.autocapitalizationType = .none
-        searchBar.placeholder = "Search"
-        return searchBar
+
+    class Coordinator: NSObject, UISearchResultsUpdating {
+        @Binding var text: String
+        let searchController: UISearchController
+
+        private var subscription: AnyCancellable?
+
+        init(text: Binding<String>) {
+            self._text = text
+            self.searchController = UISearchController(searchResultsController: nil)
+
+            super.init()
+
+            searchController.searchResultsUpdater = self
+            searchController.hidesNavigationBarDuringPresentation = true
+            searchController.obscuresBackgroundDuringPresentation = false
+
+            self.searchController.searchBar.text = self.text
+            self.subscription = self.text.publisher.sink { _ in
+                self.searchController.searchBar.text = self.text
+            }
+        }
+
+        deinit {
+            self.subscription?.cancel()
+        }
+
+        func updateSearchResults(for searchController: UISearchController) {
+            guard let text = searchController.searchBar.text else { return }
+            self.text = text
+        }
     }
-    
-    func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<CustomSearchBar>) {
-        uiView.text = text
+
+    class SearchBarWrapperController: UIViewController {
+        var searchController: UISearchController? {
+            didSet {
+                self.parent?.navigationItem.searchController = searchController
+            }
+        }
+
+        override func viewWillAppear(_ animated: Bool) {
+            self.parent?.navigationItem.searchController = searchController
+        }
+        override func viewDidAppear(_ animated: Bool) {
+            self.parent?.navigationItem.searchController = searchController
+        }
     }
 }

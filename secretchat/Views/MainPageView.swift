@@ -54,8 +54,6 @@ struct MainPageView: View {
             
             NavigationView {
                 List {
-                    CustomSearchBar(text: self.$searchText)
-                        .padding(0)
                     ForEach(people.filter { p in
                         searchText.isEmpty ? true : p.name.lowercased().contains(searchText.lowercased())
                     }) { listedPeople in
@@ -71,6 +69,7 @@ struct MainPageView: View {
                         }
                     }
                 }
+                .navigationBarSearch(self.$searchText)
                 .navigationBarItems(leading: Button(action: {}) {
                     Text("Edit")
                 })
