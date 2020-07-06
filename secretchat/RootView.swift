@@ -15,7 +15,7 @@ struct RootView: View {
     @EnvironmentObject var authController: AuthController
     
     func checkAuthAndSwitchView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             if self.authController.user == nil {
                 self.switchToLogin = true
             } else {

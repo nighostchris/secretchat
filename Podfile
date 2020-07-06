@@ -7,4 +7,5 @@ target 'secretchat' do
 
   # Pods for secretchat
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end
