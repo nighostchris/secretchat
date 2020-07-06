@@ -27,6 +27,8 @@
 		37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */; };
 		37C8B54E24B04EDE00D27578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */; };
 		37C8B55024B0635800D27578 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8B54F24B0635800D27578 /* AuthController.swift */; };
+		37D2B6C524B34A3B00E97D08 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2B6C424B34A3B00E97D08 /* Channels.swift */; };
+		37D2B6C724B3598700E97D08 /* ChannelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2B6C624B3598700E97D08 /* ChannelsListView.swift */; };
 		37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC47E224AC755D00FA8459 /* CustomDivider.swift */; };
 		6871CE199E3FB6D021751E77 /* Pods_secretchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B3CD733605232A7C53BB4C /* Pods_secretchat.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		37C5C9AF24ACBC4E00EB1558 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		37C8B54D24B04EDE00D27578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37C8B54F24B0635800D27578 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		37D2B6C424B34A3B00E97D08 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
+		37D2B6C624B3598700E97D08 /* ChannelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListView.swift; sourceTree = "<group>"; };
 		37DC47E224AC755D00FA8459 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		C8B3CD733605232A7C53BB4C /* Pods_secretchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secretchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
 				370986F824B0AEFB0095EEE4 /* SplashView.swift */,
 				376EAA9524B1C7E7006A0022 /* MainPageView.swift */,
+				37D2B6C624B3598700E97D08 /* ChannelsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		37C50DAA24ABA5FE0024BC4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37D2B6C324B3495A00E97D08 /* Firestore Schema */,
 				3757729E24B23CA0004642C1 /* CustomSearchBar.swift */,
 				37C50DAB24ABA6440024BC4B /* CustomInputField.swift */,
 				37DC47E224AC755D00FA8459 /* CustomDivider.swift */,
@@ -154,6 +160,14 @@
 				37C8B54F24B0635800D27578 /* AuthController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		37D2B6C324B3495A00E97D08 /* Firestore Schema */ = {
+			isa = PBXGroup;
+			children = (
+				37D2B6C424B34A3B00E97D08 /* Channels.swift */,
+			);
+			path = "Firestore Schema";
 			sourceTree = "<group>";
 		};
 		37DC47E424AC7FEC00FA8459 /* Images */ = {
@@ -311,7 +325,9 @@
 				37DC47E324AC755D00FA8459 /* CustomDivider.swift in Sources */,
 				37C50D9924ABA36F0024BC4B /* SceneDelegate.swift in Sources */,
 				37C8B55024B0635800D27578 /* AuthController.swift in Sources */,
+				37D2B6C724B3598700E97D08 /* ChannelsListView.swift in Sources */,
 				37C5C9B024ACBC4E00EB1558 /* CustomButton.swift in Sources */,
+				37D2B6C524B34A3B00E97D08 /* Channels.swift in Sources */,
 				376EAA9624B1C7E7006A0022 /* MainPageView.swift in Sources */,
 				37C50DAE24ABAAAA0024BC4B /* LoginPageView.swift in Sources */,
 				370986F924B0AEFB0095EEE4 /* SplashView.swift in Sources */,

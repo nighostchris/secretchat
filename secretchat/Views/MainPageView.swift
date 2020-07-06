@@ -15,9 +15,7 @@ struct People: Identifiable, Hashable {
 
 struct MainPageView: View {
     @State var currentTab: Int = 2
-    @State var searchText: String = ""
-    
-    //@ObservedObject var searchBar: CustomSearchBar = CustomSearchBar()
+    //@State var searchText: String = ""
     
     let people: [People] = [
         People(id: "A", name: "A"),
@@ -52,29 +50,30 @@ struct MainPageView: View {
             
             
             
-            NavigationView {
-                List {
-                    ForEach(people.filter { p in
-                        searchText.isEmpty ? true : p.name.lowercased().contains(searchText.lowercased())
-                    }) { listedPeople in
-                        HStack {
-
-
-                            NavigationLink(destination: LoginPageView()) {
-                                EmptyView()
-                            }
-                            .opacity(0)
-
-                            Text(listedPeople.name)
-                        }
-                    }
-                }
-                .navigationBarSearch(self.$searchText)
-                .navigationBarItems(leading: Button(action: {}) {
-                    Text("Edit")
-                })
-                .navigationBarTitle("Chats", displayMode: .inline)
-            }
+//            NavigationView {
+//                List {
+//                    ForEach(people.filter { p in
+//                        searchText.isEmpty ? true : p.name.lowercased().contains(searchText.lowercased())
+//                    }) { listedPeople in
+//                        HStack {
+//
+//
+//                            NavigationLink(destination: LoginPageView()) {
+//                                EmptyView()
+//                            }
+//                            .opacity(0)
+//
+//                            Text(listedPeople.name)
+//                        }
+//                    }
+//                }
+//                .navigationBarSearch(self.$searchText)
+//                .navigationBarItems(leading: Button(action: {}) {
+//                    Text("Edit")
+//                })
+//                .navigationBarTitle("Chats", displayMode: .inline)
+//            }
+            ChannelsListView()
             .tabItem {
                 Image(systemName: "bubble.left.and.bubble.right.fill")
                 Text("Chats")
