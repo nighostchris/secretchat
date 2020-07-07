@@ -36,6 +36,7 @@ struct RootView: View {
             } else if self.switchToMain {
                 MainPageView()
                     .transition(.opacity)
+                    .environmentObject(authController)
             }
         }
         .onAppear {

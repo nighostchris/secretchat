@@ -11,6 +11,8 @@ import SwiftUI
 struct ChannelsListView: View {
     @State var searchText: String = ""
     
+    @EnvironmentObject var authController: AuthController
+    
     @ObservedObject var channelsData = Channels()
     
     var body: some View {
@@ -30,7 +32,7 @@ struct ChannelsListView: View {
                 }
             }
             .onAppear() {
-                self.channelsData.fetch()
+                self.channelsData.getChannelsByUserId(userId: self.authController.user!.uid)
             }
             .navigationBarSearch(self.$searchText)
             .navigationBarItems(leading: Button(action: {}) {

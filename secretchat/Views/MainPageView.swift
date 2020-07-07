@@ -17,6 +17,8 @@ struct MainPageView: View {
     @State var currentTab: Int = 2
     //@State var searchText: String = ""
     
+    @EnvironmentObject var authController: AuthController
+    
     let people: [People] = [
         People(id: "A", name: "A"),
         People(id: "B", name: "B"),
@@ -74,6 +76,7 @@ struct MainPageView: View {
 //                .navigationBarTitle("Chats", displayMode: .inline)
 //            }
             ChannelsListView()
+            .environmentObject(authController)
             .tabItem {
                 Image(systemName: "bubble.left.and.bubble.right.fill")
                 Text("Chats")

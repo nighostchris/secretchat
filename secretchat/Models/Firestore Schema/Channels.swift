@@ -21,17 +21,14 @@ class Channels: ObservableObject {
     
     var db = Firestore.firestore()
     
-    func fetch() {
-        print("fetching")
+    func getChannelsByUserId(userId: String) {
         print(Auth.auth().currentUser?.uid ?? "")
-        db.collection("channels").whereField("participants", arrayContains: Auth.auth().currentUser?.uid ?? "")
+        db.collection("channels").whereField("participants", arrayContains: userId)
             .addSnapshotListener { (querySnapshot, error) in
                 guard let documents = querySnapshot?.documents else {
                     print("Fetch channels error.")
                     return
                 }
-                
-                print("no error")
                 
                 self.channels = documents.map{ queryDocumentSnapshot -> Channel in
                     let data = queryDocumentSnapshot.data()
