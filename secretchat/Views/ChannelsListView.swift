@@ -32,7 +32,7 @@ struct ChannelsListView: View {
                 }
             }
             .onAppear() {
-                self.channelsData.getChannelsByUserId(userId: self.authController.user!.uid)
+                self.channelsData.getChannelsByEmail(email: self.authController.user!.email ?? "")
             }
             .navigationBarSearch(self.$searchText)
             .navigationBarItems(leading: Button(action: {}) {

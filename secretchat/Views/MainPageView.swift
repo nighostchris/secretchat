@@ -50,31 +50,6 @@ struct MainPageView: View {
             }
             .tag(1)
             
-            
-            
-//            NavigationView {
-//                List {
-//                    ForEach(people.filter { p in
-//                        searchText.isEmpty ? true : p.name.lowercased().contains(searchText.lowercased())
-//                    }) { listedPeople in
-//                        HStack {
-//
-//
-//                            NavigationLink(destination: LoginPageView()) {
-//                                EmptyView()
-//                            }
-//                            .opacity(0)
-//
-//                            Text(listedPeople.name)
-//                        }
-//                    }
-//                }
-//                .navigationBarSearch(self.$searchText)
-//                .navigationBarItems(leading: Button(action: {}) {
-//                    Text("Edit")
-//                })
-//                .navigationBarTitle("Chats", displayMode: .inline)
-//            }
             ChannelsListView()
             .environmentObject(authController)
             .tabItem {
@@ -83,9 +58,22 @@ struct MainPageView: View {
             }
             .tag(2)
             
-            NavigationView {
-                Text("empty view")
-            }
+//            NavigationView {
+//                VStack {
+//                    HStack {
+//                        Spacer()
+//
+//                        Button(action:{}) {
+//                            Text("Log Out")
+//                                .foregroundColor(Color("Red"))
+//                        }
+//
+//                        Spacer()
+//                    }
+//                }
+//                .navigationBarTitle("Edit Profile", displayMode: .inline)
+//            }
+            SettingsView()
             .tabItem{
                 Image(systemName: "gear")
                 Text("Settings")

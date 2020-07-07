@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		370986F924B0AEFB0095EEE4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370986F824B0AEFB0095EEE4 /* SplashView.swift */; };
 		3716014324AF4D6600ABFD9A /* RegisterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716014224AF4D6600ABFD9A /* RegisterPageView.swift */; };
+		3754DA0024B4AA5000EF22D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754D9FF24B4AA5000EF22D0 /* SettingsView.swift */; };
 		3754E8C524AE114D0053EF3B /* facebook-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C424AE114D0053EF3B /* facebook-logo.png */; };
 		3754E8C724AE12550053EF3B /* google-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C624AE12550053EF3B /* google-logo.png */; };
 		3754E8C924AE182F0053EF3B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754E8C824AE182F0053EF3B /* logo.png */; };
@@ -38,6 +39,7 @@
 		32AA33D46C1C092E47A6855A /* Pods-secretchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretchat.debug.xcconfig"; path = "Target Support Files/Pods-secretchat/Pods-secretchat.debug.xcconfig"; sourceTree = "<group>"; };
 		370986F824B0AEFB0095EEE4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3716014224AF4D6600ABFD9A /* RegisterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageView.swift; sourceTree = "<group>"; };
+		3754D9FF24B4AA5000EF22D0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3754E8C424AE114D0053EF3B /* facebook-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-logo.png"; sourceTree = "<group>"; };
 		3754E8C624AE12550053EF3B /* google-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo.png"; sourceTree = "<group>"; };
 		3754E8C824AE182F0053EF3B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		3716014424AF779900ABFD9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3754D9FE24B4AA3300EF22D0 /* Tabs */,
 				37C50DAD24ABAAAA0024BC4B /* LoginPageView.swift */,
 				3716014224AF4D6600ABFD9A /* RegisterPageView.swift */,
 				370986F824B0AEFB0095EEE4 /* SplashView.swift */,
@@ -86,6 +89,14 @@
 				37D2B6C624B3598700E97D08 /* ChannelsListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3754D9FE24B4AA3300EF22D0 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				3754D9FF24B4AA5000EF22D0 /* SettingsView.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		375EA2A624AC5F9E00869C9A /* Resources */ = {
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3754DA0024B4AA5000EF22D0 /* SettingsView.swift in Sources */,
 				3757729F24B23CA0004642C1 /* CustomSearchBar.swift in Sources */,
 				37C50DAC24ABA6440024BC4B /* CustomInputField.swift in Sources */,
 				37C50D9724ABA36F0024BC4B /* AppDelegate.swift in Sources */,
